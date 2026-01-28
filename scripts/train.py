@@ -1,7 +1,7 @@
 """
 Military Aircraft Detection - Training Script
 Author: [DHRUV GAUR]
-GitHub: https://github.com/dhruvgaur10/military-aircraft-detection
+GitHub: https://github.com/dhruvgaur10/Military-Aircraft-Detection
 """
 
 from ultralytics import YOLO
