@@ -1,0 +1,38 @@
+# Dataset (too large for GitHub)
+data/train/
+data/valid/
+data/test/
+
+# Test files
+test_files/
+
+# Cache files
+*.cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Model weights (upload to GitHub Releases instead)
+models/*.pt
+
+# Training runs
+runs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment
+.env
+venv/
+env/
