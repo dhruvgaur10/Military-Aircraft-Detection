@@ -1,3 +1,6 @@
+# Model weights
+*.pt
+
 # Dataset (too large for GitHub)
 data/train/
 data/valid/
