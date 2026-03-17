@@ -2,6 +2,8 @@
 
 Real-time military aircraft detection system using YOLOv8. Detects and classifies 36 fighter jets, bombers, and reconnaissance aircraft from images, videos, and live feeds.
 
+![Inference Demo](assets/Screenshot-inference.png)
+
 ## Features
 
 - Multi-class detection across 36 military aircraft.
@@ -36,9 +38,20 @@ pip install -r requirements.txt
 ```
 ## Usage
 ```
-python scripts/detect.py --source image.jpg
-python scripts/detect.py --source video.mp4
+# Run on image
+python scripts/detect.py --source test_files/image.jpg
+
+# Run on video
+python scripts/detect.py --source test_files/video.mp4
+
+# Run on webcam
 python scripts/detect.py --source 0
+
+# Auto-open result after processing
+python scripts/detect.py --source test_files/video.mp4 --play
+
+# Adjust confidence threshold (default: 0.25)
+python scripts/detect.py --source test_files/image.jpg --conf 0.5
 ```
 ## Training
 ```

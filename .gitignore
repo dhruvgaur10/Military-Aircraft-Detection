@@ -1,25 +1,32 @@
-# Model weights
-*.pt
+# Claude Code settings
+.claude/
 
-# Dataset (too large for GitHub)
+# Base YOLO weights (auto-downloaded by ultralytics, no need to commit)
+scripts/yolov8n.pt
+scripts/yolo26n.pt
+
+# Dataset (too large for GitHub - ~4000 images)
 data/train/
 data/valid/
 data/test/
-
-# Test files
-test_files/
-
-# Cache files
 *.cache
+
+# Training run outputs
+runs/
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
 .pytest_cache/
 
-# Model weights (upload to GitHub Releases instead)
-models/*.pt
+# Jupyter Notebook
+.ipynb_checkpoints/
 
-# Training runs
-runs/
+# Environment (use your own venv - e.g. cvstack)
+.env
+venv/
+env/
 
 # OS files
 .DS_Store
@@ -31,11 +38,3 @@ desktop.ini
 .idea/
 *.swp
 *.swo
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# Environment
-.env
-venv/
-env/
