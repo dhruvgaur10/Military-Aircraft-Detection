@@ -1,6 +1,3 @@
-# Claude Code settings
-.claude/
-
 # Base YOLO weights (auto-downloaded by ultralytics, no need to commit)
 scripts/yolov8n.pt
 scripts/yolo26n.pt
