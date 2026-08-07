@@ -1,12 +1,19 @@
 # Base YOLO weights (auto-downloaded by ultralytics, no need to commit)
-scripts/yolov8n.pt
-scripts/yolo26n.pt
+*.pt
+!models/best.pt
+
+# Training/validation logs (working files, not project artifacts)
+runs_train.log
+validate.log
 
 # Dataset (too large for GitHub - ~4000 images)
 data/train/
 data/valid/
 data/test/
 *.cache
+
+# Test videos (too large for GitHub)
+test_files/
 
 # Training run outputs
 runs/

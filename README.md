@@ -1,26 +1,47 @@
 # Military-Aircraft-Detection
 
-Real-time military aircraft detection system using YOLOv8. Detects and classifies 36 fighter jets, bombers, and reconnaissance aircraft from images, videos, and live feeds.
-
-![Inference Demo](assets/Screenshot-inference.png)
+![Inference Demo](assets/prediction_demo.gif)
 
 ## Features
 
-- Multi-class detection across 36 military aircraft.
-- Real-time video inference at ~100 FPS (RTX 4050).
-- GPU accelerated using CUDA and mixed precision.
-- Supports image, video, and webcam input.
-- Modular codebase with automatic path resolution.
-
-## Supported Aircraft
-
-`F-22` `F-35` `F-16` `F-15` `F-18` `F-14` `F-4` `B-2` `B-1` `B-52` `F-117` `SR-71` `A-10` `C-130` `C-17` `C-5` `U-2` `YF-23` `XB-70` `Su-57` `MiG-31` `Tu-95` `Tu-160` `J-20` `Rafale` `EF2000` `JAS-39` `Mirage-2000` `V-22` `MQ-9` `RQ-4` `E-2` `AG600` `Be200` `US-2` `A400M`
+- 101 aircraft classes
+- Real-time video inference (~100 FPS on RTX 4050)
+- Image, video, and webcam input
+- Aircraft metadata (country, role, key facts) attached to every detection
+- Confidence-based warnings for visually similar aircraft
+- JSON detection reports
 
 ## Performance
 
-- **Inference**: ~9ms/frame
-- **Classes**: 36
-- **Dataset**: 3,523 training images
+| Metric | Value |
+|---|---|
+| mAP@50 | 0.663 |
+| mAP@50-95 | 0.556 |
+| Precision | 0.682 |
+| Recall | 0.576 |
+
+Evaluated on the held-out test split (1,570 images). YOLOv8s, 640px, 73 epochs.
+
+## Training Curves
+
+![Training Results](assets/results.png)
+
+## Confusion Matrix
+
+<p align="center">
+  <img src="assets/confusion_matrix_normalized.png" width="70%">
+</p>
+
+## Predictions on Validation Data
+
+<p align="center">
+  <img src="assets/val_batch0_pred.jpg" width="49%">
+  <img src="assets/val_batch1_pred.jpg" width="49%">
+</p>
+
+## Supported Aircraft
+
+`F22` `F35` `F16` `F15` `F18` `F14` `F4` `B2` `B1` `B52` `F117` `SR71` `A10` `C130` `C17` `C5` `U2` `XB70` `Su57` `Mig31` `Tu95` `Tu160` `J20` `Rafale` `EF2000` `JAS39` `Mirage2000` `V22` `MQ9` `RQ4` `E2` `AG600` `Be200` `US2` `A400M` `KAAN` `AKINCI` `TB2` `An225` and 60+ more. Full list in [`data/data.yaml`](data/data.yaml).
 
 ## Requirements
 
@@ -55,7 +76,7 @@ python scripts/detect.py --source test_files/image.jpg --conf 0.5
 ```
 ## Training
 ```
-python scripts/train.py
+python scripts/train.py --model yolov8s.pt --epochs 300 --batch 12
 ```
 
 ## Structure
@@ -63,9 +84,14 @@ python scripts/train.py
 military-aircraft-detection/
 ├── models/best.pt
 ├── data/
+│ └── data.yaml
 ├── scripts/
+│ ├── prepare_dataset.py
 │ ├── train.py
+│ ├── validate.py
 │ └── detect.py
+├── assets/
+├── test_files/
 ├── requirements.txt
 └── README.md
 ```
