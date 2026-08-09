@@ -35,7 +35,7 @@ Evaluated on the held-out test split (1,570 images). YOLOv8s, 640px, 73 epochs.
 ## Confusion Matrix
 
 <p align="center">
-  <img src="assets/confusion_matrix_normalized.png" width="70%">
+  <img src="assets/confusion_matrix_normalized.png" width="45%">
 </p>
 
 ## Predictions on Validation Data
