@@ -25,10 +25,11 @@ Evaluated on the held-out test split (1,570 images). YOLOv8s, 640px, 73 epochs.
 ## Curves
 
 <p align="center">
+  <img src="assets/results.png" width="98%">
+</p>
+<p align="center">
   <img src="assets/BoxPR_curve.png" width="49%">
   <img src="assets/BoxF1_curve.png" width="49%">
-  <img src="assets/BoxP_curve.png" width="49%">
-  <img src="assets/BoxR_curve.png" width="49%">
 </p>
 
 ## Confusion Matrix
@@ -46,7 +47,14 @@ Evaluated on the held-out test split (1,570 images). YOLOv8s, 640px, 73 epochs.
 
 ## Supported Aircraft
 
-`F22` `F35` `F16` `F15` `F18` `F14` `F4` `B2` `B1` `B52` `F117` `SR71` `A10` `C130` `C17` `C5` `U2` `XB70` `Su57` `Mig31` `Tu95` `Tu160` `J20` `Rafale` `EF2000` `JAS39` `Mirage2000` `V22` `MQ9` `RQ4` `E2` `AG600` `Be200` `US2` `A400M` `KAAN` `AKINCI` `TB2` `An225` and 60+ more. Full list in [`data/data.yaml`](data/data.yaml).
+<details>
+<summary>View all 101 classes</summary>
+
+`A10` `A400M` `AG600` `AH64` `AKINCI` `AV8B` `An124` `An22` `An225` `An72` `B1` `B2` `B21` `B52` `Be200` `C1` `C130` `C17` `C2` `C390` `C5` `CH47` `CH53` `CL415` `E2` `E7` `EF2000` `EMB314` `F117` `F14` `F15` `F16` `F18` `F2` `F22` `F35` `F4` `FCK1` `H6` `Il76` `J10` `J20` `J35` `J36` `J50` `JAS39` `JF17` `JH7` `KAAN` `KC135` `KF21` `KIZILELMA` `KJ600` `Ka27` `Ka52` `MQ25` `MQ28` `MQ35` `MQ9` `Mi24` `Mi26` `Mi28` `Mi8` `Mig29` `Mig31` `Mirage2000` `NH90` `P3` `RQ4` `Rafale` `SR71` `Su24` `Su25` `Su34` `Su47` `Su57` `T50` `TB001` `TB2` `Tejas` `Tornado` `Tu160` `Tu22M` `Tu95` `U2` `UH60` `US2` `V22` `V280` `Vulcan` `WZ10` `WZ7` `X29` `X32` `XB70` `XQ58` `Y20` `YF23` `Z10` `Z19` `Z21`
+
+</details>
+
+Full list also in [`data/data.yaml`](data/data.yaml).
 
 ## Requirements
 
