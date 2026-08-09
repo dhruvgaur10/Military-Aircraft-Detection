@@ -2,6 +2,8 @@
 
 ![Inference Demo](assets/prediction_demo.gif)
 
+[Performance](#performance) · [Curves](#curves) · [Confusion Matrix](#confusion-matrix) · [Predictions](#predictions-on-validation-data) · [Aircraft List](#supported-aircraft) · [Usage](#usage)
+
 ## Features
 
 - 101 aircraft classes
