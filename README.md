@@ -22,9 +22,14 @@
 
 Evaluated on the held-out test split (1,570 images). YOLOv8s, 640px, 73 epochs.
 
-## Training Curves
+## Curves
 
-![Training Results](assets/results.png)
+<p align="center">
+  <img src="assets/BoxPR_curve.png" width="49%">
+  <img src="assets/BoxF1_curve.png" width="49%">
+  <img src="assets/BoxP_curve.png" width="49%">
+  <img src="assets/BoxR_curve.png" width="49%">
+</p>
 
 ## Confusion Matrix
 
