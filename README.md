@@ -8,7 +8,7 @@
 
 - 101 aircraft classes, fighters to bombers to UAVs, one model
 - Real-time inference on image, video, and webcam (~100 FPS on RTX 4050)
-- Every detection carries metadata — country, role, one-line fact — not just a label
+- Every detection carries metadata: country, role, one-line fact, not just a label
 - Flags low-margin calls against visually similar airframes instead of guessing silently
 - Structured JSON output per run, ready to pipe into another system
 
@@ -21,7 +21,7 @@
 | Precision | 0.682 |
 | Recall | 0.576 |
 
-Numbers above are from the test split — 1,570 images the model never saw in training or validation, no leakage. YOLOv8s at 640px, stopped at epoch 73 once validation mAP flattened out.
+mAP@50 uses IoU 0.5, a loose match where the model just has to get the box roughly right. mAP@50-95 averages over IoU 0.5 to 0.95 in steps of 0.05, so it punishes sloppy box localization and is the harder number to move. Precision and recall are measured at the default 0.25 confidence threshold. All four are computed on the test split, 1,570 images the model never saw during training or validation. YOLOv8s, 640px input, trained through epoch 73 once validation mAP flattened out.
 
 ## Curves
 
