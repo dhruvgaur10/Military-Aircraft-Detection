@@ -6,12 +6,11 @@
 
 ## Features
 
-- 101 aircraft classes
-- Real-time video inference (~100 FPS on RTX 4050)
-- Image, video, and webcam input
-- Aircraft metadata (country, role, key facts) attached to every detection
-- Confidence-based warnings for visually similar aircraft
-- JSON detection reports
+- 101 aircraft classes, fighters to bombers to UAVs, one model
+- Real-time inference on image, video, and webcam (~100 FPS on RTX 4050)
+- Every detection carries metadata — country, role, one-line fact — not just a label
+- Flags low-margin calls against visually similar airframes instead of guessing silently
+- Structured JSON output per run, ready to pipe into another system
 
 ## Performance
 
@@ -22,7 +21,7 @@
 | Precision | 0.682 |
 | Recall | 0.576 |
 
-Evaluated on the held-out test split (1,570 images). YOLOv8s, 640px, 73 epochs.
+Numbers above are from the test split — 1,570 images the model never saw in training or validation, no leakage. YOLOv8s at 640px, stopped at epoch 73 once validation mAP flattened out.
 
 ## Curves
 
